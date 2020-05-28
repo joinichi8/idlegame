@@ -18,3 +18,7 @@ function buyCursor() {
   var nextCost = Math.floor(10 * Math.pow(1.1,cursors));
   document.getElementById('cursorCost').innerHTML = nextCost;
 }
+
+window.setInterval(function() {
+  cookieClick(cursors);
+}, 1000);
