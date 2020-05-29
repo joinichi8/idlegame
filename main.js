@@ -22,3 +22,23 @@ function buyCursor() {
 window.setInterval(function() {
   cookieClick(cursors);
 }, 1000);
+
+function save() {
+  var save = {
+    cookies: cookies,
+    cursors: cursors
+  }
+  localStorage.setItem("save", JSON.stringify(save));
+  console.log(save);
+}
+
+function load() {
+  var savegame = JSON.parse(localStorage.getItem("save"));
+  if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
+  console.log(savegame);
+}
+
+function reset() {
+    localStorage.removeItem("save");
+    console.log(save);
+}
