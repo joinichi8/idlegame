@@ -1,0 +1,2 @@
+# idlegame
+My first idlegame
